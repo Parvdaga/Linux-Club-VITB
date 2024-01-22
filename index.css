@@ -133,6 +133,7 @@ body {
         width: 100%;
         background-image: url("C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Home page earth.png");
         background-size: cover;
+
     }
 
     .text1 {
@@ -155,22 +156,24 @@ body {
 }
 
 .bottom-line {
-    width: 80%;
+    width: 70%;
     text-align: center;
-    border-bottom: 1vh solid #8602FA;
+    border-bottom: 0.5vh solid #8602FA;
     font-weight: 400;
     font-size: 1.5vw;
     line-height: 0.09em;
     position: relative;
     margin-top: 1.1vh;
     margin-bottom: 2vh;
-    margin-left: 10%;
+    margin-left: 15%;
 }
 
 .bottom-line span {
     background: #0F0727;
     color: white;
     padding: 0 10px;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
 }
 
 .about-text {
@@ -191,7 +194,8 @@ body {
         font-size: 3vw;
         line-height: 0%;
     }
-    .about-text{
+
+    .about-text {
         margin-top: 8vh;
         font-size: 2vw;
         letter-spacing: 0.4vw;
