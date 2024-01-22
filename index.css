@@ -70,7 +70,7 @@ body {
     }
 }
 
-.home {
+#home {
     height: calc(100%-100px);
     width: 100%;
     display: flex;
@@ -200,4 +200,138 @@ body {
         font-size: 2vw;
         letter-spacing: 0.4vw;
     }
+}
+.sponsor{
+    margin-top: 20vh;
+    align-items: center;
+    justify-items: center;
+}
+.sponsor-text{
+    color: #8602FA;
+    font-size: 2.5vw;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.6vw;
+}
+.sponsor-text span{
+    color: white;
+}
+.companies-logo{
+    display: flex;
+    margin-top: 10vh;
+    width: 60%;
+    margin-left: 20%;
+    gap: 3vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.secops{
+    width: 10vw;
+    height: auto;
+    filter: grayscale(100%);
+}
+.secops:hover{
+    filter: grayscale(0%);
+}
+
+.unstop{
+    width: 10vw;
+    height: auto;
+    filter: grayscale(100%);
+}
+.unstop:hover{
+    filter: grayscale(0%);
+}
+@media (max-width:600px) {
+    .sponsor{
+        margin-top: 10vh;
+    }
+    .sponsor-text{
+        font-size: 4vw;
+    }
+    .companies-logo{
+        margin-top: 5vh;
+    }
+    .unstop{
+        width: 15vw;
+    }
+    .secops{
+        width: 15vw;
+    }
+}
+.linux-club{
+    margin-top: 15vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6vh;
+}
+.row-1{
+    display: flex;
+    margin-top: 5vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    gap: 6vw;
+    margin-left: 5%;
+}
+.box-1{
+    background-color: #290460;
+    color: white;
+    text-align: center;
+    height: 55vh;
+    border-radius: 10%;
+}
+.box-head{
+    font-size: 1.7vw;
+    line-height: 6vh;
+    letter-spacing: 0.51vw;
+    margin-top: 4vh;
+}
+.box-line{
+    border-radius: 15%;
+    border: 0.5vh solid #8602FA;
+    width: 80%;
+    margin-top: -3vh;
+    margin-bottom: 5vh;
+    margin-left: 10%;
+}
+.box-text{
+    padding: 0 1vw 0 1vw;
+    font-size: 1vw;
+    line-height: 6vh;
+    font-weight: 400;
+    margin-bottom: 4vh;
+}
+@media (max-width:600px) {
+    .linux-club{
+        margin-top: 6vh;
+}
+.row-1{
+    margin-top: 2vh;
+    width: 80%;
+    margin-left: 10%;
+}
+.box-1{
+    height: 25vh;
+}
+.box-head{
+    font-size: 3vw;
+    line-height: 2vh;
+}
+.box-line{
+    margin-top: -1vw;
+    border: 0.3vh solid #8602FA;
+}
+.box-text{
+    font-size:1.6vw ;
+    line-height: 2vh;
+    margin-top: -3vh;
+    padding: 0 1.2vw 0 1.2vw;
+}
+}
+#events{
+    margin-top: 30vh;
 }
