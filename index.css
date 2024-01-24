@@ -1,11 +1,18 @@
 body {
     font-family: 'Quicksand', sans-serif;
     background-color: #0F0727;
+    margin: 0;
 }
 
 /*color: #8602FA;*/
 .moon-dance-regular {
     font-family: "Moon Dance", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.qwitcher-grypen-regular {
+    font-family: "Qwitcher Grypen", cursive;
     font-weight: 400;
     font-style: normal;
 }
@@ -201,22 +208,26 @@ body {
         letter-spacing: 0.4vw;
     }
 }
-.sponsor{
+
+.sponsor {
     margin-top: 20vh;
     align-items: center;
     justify-items: center;
 }
-.sponsor-text{
+
+.sponsor-text {
     color: #8602FA;
     font-size: 2.5vw;
     text-align: center;
     font-weight: 500;
     letter-spacing: 0.6vw;
 }
-.sponsor-text span{
+
+.sponsor-text span {
     color: white;
 }
-.companies-logo{
+
+.companies-logo {
     display: flex;
     margin-top: 10vh;
     width: 60%;
@@ -226,48 +237,58 @@ body {
     justify-content: center;
     text-align: center;
 }
-.secops{
+
+.secops {
     width: 10vw;
     height: auto;
     filter: grayscale(100%);
 }
-.secops:hover{
+
+.secops:hover {
     filter: grayscale(0%);
 }
 
-.unstop{
+.unstop {
     width: 10vw;
     height: auto;
     filter: grayscale(100%);
 }
-.unstop:hover{
+
+.unstop:hover {
     filter: grayscale(0%);
 }
+
 @media (max-width:600px) {
-    .sponsor{
+    .sponsor {
         margin-top: 10vh;
     }
-    .sponsor-text{
-        font-size: 4vw;
+
+    .sponsor-text {
+        font-size: 6vw;
     }
-    .companies-logo{
+
+    .companies-logo {
         margin-top: 5vh;
     }
-    .unstop{
-        width: 15vw;
+
+    .unstop {
+        width: 17vw;
     }
-    .secops{
-        width: 15vw;
+
+    .secops {
+        width: 17vw;
     }
 }
-.linux-club{
+
+.linux-club {
     margin-top: 15vh;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 6vh;
 }
-.row-1{
+
+.row-1 {
     display: flex;
     margin-top: 5vh;
     position: relative;
@@ -277,20 +298,23 @@ body {
     gap: 6vw;
     margin-left: 5%;
 }
-.box-1{
+
+.box-1 {
     background-color: #290460;
     color: white;
     text-align: center;
     height: 55vh;
     border-radius: 10%;
 }
-.box-head{
+
+.box-head {
     font-size: 1.7vw;
     line-height: 6vh;
     letter-spacing: 0.51vw;
     margin-top: 4vh;
 }
-.box-line{
+
+.box-line {
     border-radius: 15%;
     border: 0.5vh solid #8602FA;
     width: 80%;
@@ -298,40 +322,580 @@ body {
     margin-bottom: 5vh;
     margin-left: 10%;
 }
-.box-text{
+
+.box-text {
     padding: 0 1vw 0 1vw;
     font-size: 1vw;
     line-height: 6vh;
     font-weight: 400;
     margin-bottom: 4vh;
 }
+
 @media (max-width:600px) {
-    .linux-club{
+    .linux-club {
         margin-top: 6vh;
+    }
+
+    .row-1 {
+        margin-top: 2vh;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .box-1 {
+        height: 25vh;
+    }
+
+    .box-head {
+        font-size: 3vw;
+        line-height: 2vh;
+    }
+
+    .box-line {
+        margin-top: -1vw;
+        border: 0.3vh solid #8602FA;
+    }
+
+    .box-text {
+        font-size: 1.6vw;
+        line-height: 2vh;
+        margin-top: -3vh;
+        padding: 0 1.2vw 0 1.2vw;
+    }
 }
-.row-1{
+
+#events {
+    margin-top: 30vh;
+}
+
+.event-box {
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+    gap: 7vw;
+}
+
+.event1 {
+    background-color: #1D0C4D;
+    border-radius: 15px;
+    text-align: center;
+    width: 25vw;
+    height: auto;
+
+}
+
+.event-img {
+    margin-top: 5vh;
+    background-color: #8602FA;
+    width: 20vw;
+    height: auto;
+    border-radius: 20px;
+}
+
+.event-heading {
+    color: #8602FA;
+    font-size: 2vw;
+}
+
+.event-location {
+    color: white;
+    margin-top: -2vh;
+    font-size: 1.4vw;
+    font-weight: 400;
+}
+
+.event-box button {
+    display: inline-block;
+    padding: 1.5vh 1.5vw;
+    border: none;
+    font-family: quicksand;
+    font-weight: 500;
+    margin-bottom: 6vh;
+    font-size: 1.5vw;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    color: #290460;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.event-box button:hover {
+    background-color: #8602FA;
+    color: white;
+}
+
+@media (max-width:600px) {
+    #events {
+        margin-top: 15vh;
+    }
+
+    .event-box {
+        margin-top: 7vh;
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .event1 {
+        width: 80%;
+    }
+
+    .event-img {
+        width: 40vw;
+    }
+
+    .event-heading {
+        font-size: 6vw;
+    }
+
+    .event-location {
+        font-size: 4.5vw;
+    }
+
+    .event-box button {
+        padding: 1vh 2.5vw;
+        margin-top: -4vh;
+        font-size: 3vw;
+    }
+}
+
+.faculty {
+    margin-top: 30vh;
+    text-align: center;
+
+}
+
+.faculty-sub {
+    text-align: center;
+    color: #8602FA;
+    font-family: Qwitcher Grypen;
+    font-size: 2vw;
+    letter-spacing: 1vw;
+
+}
+
+.faculty-box {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-top: 13vh;
+    gap: 7vw;
+}
+
+.faculty1 {
+    width: 30vw;
+    align-items: center;
+    height: auto;
+    justify-content: center;
+    border: white solid 0.01em;
+    border-radius: 30px;
+}
+
+.faculty1 img {
+    width: 120px;
+    margin-top: 5vh;
+    height: 120px;
+    border-radius: 50%;
+
+}
+
+.faculty-text {
+    color: white;
+    font-size: 1.8vw;
+}
+
+.faculty-subtext {
+    color: #8602FA;
     margin-top: 2vh;
+    font-size: 1.4vw;
+}
+
+@media (max-width:600px) {
+    .faculty {
+        margin-top: 10vh;
+    }
+
+    .faculty-sub {
+        font-size: 4vw;
+    }
+
+    .faculty-box {
+        margin-top: 6vh;
+    }
+
+    .faculty1 {
+        height: auto;
+    }
+
+    .faculty-box img {
+        width: 80px;
+        height: 80px;
+        margin-top: 2vh;
+    }
+
+    .faculty-subtext {
+        font-size: 1.6vw;
+        margin-bottom: 2vh;
+    }
+}
+
+#our-team {
+    margin-top: 30vh;
+}
+
+.trans-box {
+    width: 90%;
+    margin-top: 12vh;
+    margin-left: 5%;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: #191131;
+    border-radius: 10px;
+
+}
+.row-team{
+    width: 80%;
+    padding-top: 10vh;
+    margin-left: 10%;
+    text-align: center;
+    display: flex;
+    gap: 8vw;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.member1 img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: none;
+}
+.member-name{
+    color: white;
+    font-weight: 400;
+    font-size: 1.5vw;
+    letter-spacing: 0.5vw;
+}
+.member-post{
+    color: #8602FA;
+    font-weight: 300;
+
+    font-size: 1vw;
+    letter-spacing: 0.4vw;
+}
+.team-lines{
     width: 80%;
     margin-left: 10%;
 }
-.box-1{
-    height: 25vh;
+@media (max-width:600px) {
+    #our-team{
+        margin-top: 12vh;
+    }
+    .trans-box{
+        margin-top: 5vh;
+        width: 80%;
+        margin-left: 10%;
+    }
+    .row-team{
+        gap: 4vw;
+        padding-top:1vh ;
+    }
+    .member1 img{
+        width: 80px;
+        height: 80px;
+    }
+    .member-name{
+        font-size: 2.5vw;
+    }
+    .member-post{
+        font-size: 2vw;
+    }
 }
-.box-head{
-    font-size: 3vw;
-    line-height: 2vh;
-}
-.box-line{
-    margin-top: -1vw;
-    border: 0.3vh solid #8602FA;
-}
-.box-text{
-    font-size:1.6vw ;
-    line-height: 2vh;
-    margin-top: -3vh;
-    padding: 0 1.2vw 0 1.2vw;
-}
-}
-#events{
+
+
+
+
+#contact-us {
     margin-top: 30vh;
+}
+
+.contact-box {
+    display: flex;
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10vh;
+    gap: 10vw;
+}
+
+.address {
+    margin-top: 7vh;
+    margin-left: 5vw;
+}
+
+.address-heading {
+    color: #8602FA;
+    font-weight: 550;
+    margin-bottom: 4vh;
+}
+
+.address-text {
+    color: white;
+    font-size: 1.2vw;
+    font-weight: 350;
+    letter-spacing: 0.2vw;
+    margin-top: -1vh;
+    line-height: 4vh;
+}
+
+.address i {
+    color: white;
+    width: 1vw;
+    height: auto;
+    margin-left: 1vw;
+    gap: 2vw;
+}
+.address i:hover{
+    color: #8602FA;
+}
+
+.form-box {
+    margin-top: 7vh;
+    width: 50%;
+    margin-left: 25%;
+    align-items: center;
+
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    border-radius: 15px;
+    color: white;
+    background-color: #290460;
+}
+
+.message {
+    font-size: 3vw;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+
+form label {
+    font-size: 1.5vw;
+    text-align: left;
+    margin-bottom: 1.5vh;
+    margin-top: 2vh;
+}
+
+form input {
+    border: none;
+    border-radius: 5px;
+    color: #0F0727;
+}
+form input text{
+    font-size: 1vw;
+}
+.form-button {
+    text-align: center;
+    align-items: center;
+}
+
+form button {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px;
+    padding: 1.5vh 3vw;
+    font-family: quicksand;
+    color: #0F0727;
+    font-size: 1.5vw;
+    margin-bottom: 4vh;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+form button:hover {
+    background-color: #8602FA;
+    color: white;
+    
+}
+@media (max-width:600px) {
+    #contact-us{
+        margin-top:10vh;
+    }
+    .contact-box{
+        flex-direction: column;
+        margin-top: 4vh;
+    }
+    .address{
+        margin-top: 3vh;
+    }.address-heading{
+        font-size: 5vw;
+        margin-bottom: 2vh;
+    }
+    .address-text{
+        font-size: 3.5vw;
+        line-height: 3vh;
+    }
+    .address i{
+        font-size: 6vw;
+    }
+    .form-box{
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 3vh;
+    }
+    .message{
+        font-size: 6vw;
+        margin-bottom: 0.5vh;
+    }
+    form label{
+        margin-top: 0.5vh;
+        font-size: 2.5vw;
+    }
+    form button{
+        padding: 1vh 4vw;
+        font-size: 3vw;
+    }
+}
+    
+    
+
+footer{
+    margin-top: 20vh;
+    margin-bottom: -8vh;
+    background-color: #0C0422;
+    width: 100%;
+    
+    
+}
+.footer-info{
+    display: flex;
+    gap: 15vw;
+    width: 90%;
+    position: relative;
+    color: white;
+    padding-top: 5vh;
+    margin-left: 5%;
+}
+.logo-column{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.logo-column img{
+    width: 21vw;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+.power{
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 0.1vh;
+    font-weight: 400;
+}
+.quick-links-heading{
+    font-weight: 550;
+    font-size: 1.8vw;
+}
+.links{
+    
+    list-style-type: none;
+    line-height: 7vh;
+}
+.links a{
+    text-decoration: none;
+    font-size: 1.2vw;
+    color: white;
+    margin-left: 1vw;
+}
+.links a:hover{
+    color: #8602FA;
+}
+.footer-social{
+    margin-top: 5vh;
+    text-align: center;
+    color: white;
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 4vh;
+    gap: 3vw;
+    justify-content: center;
+}
+.footer-social i:hover{
+    color: #8602FA;
+}
+.footer-line{
+    width: 90%;
+    margin-left: 5%;
+    
+}
+.copyright{
+    text-align: center;
+    color: white;
+    padding-bottom: 5vh;
+    margin-top: 3vh;
+    font-weight: 300;
+    font-size: 1.3vw;
+
+}
+@media (max-width:600px) {
+    footer{
+        margin-top: 5vh;
+    }
+    .copyright{
+        font-size: 2.5vw;
+        padding-bottom: 3vh;
+        margin-top: 2vh;
+    }
+    .footer-info{
+        
+        gap: 5vh;
+    }
+    .logo-column{
+        text-align: left;
+
+    }
+    .logo-column img{
+        width: 45vw;
+    }
+    .power{
+        text-align: left;
+        font-size: 4vw;
+        padding-left: 10vw;
+    }
+    .quick-links{
+        width: 50%;
+    }
+    .quick-links-heading{
+        font-size: 5vw;
+        padding-left: 4vw;
+    }
+    .links{
+        line-height: 4vh;
+        padding-left: 4vw;
+    }
+    .links a{
+        font-size: 3vw;
+    }
+    .news{
+        display: none;
+    }
+    .footer-social {
+        margin-bottom: 2vh;
+        font-size: 6vw;
+    }
+
 }
