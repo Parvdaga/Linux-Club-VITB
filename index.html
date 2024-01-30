@@ -18,240 +18,246 @@
     <div class="main">
         <div class=nav>
             <img src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\logo.png">
-
-            <div class="nav-part2">
+            <ul class="nav-part2">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#events">Events</a></li>
                 <li><a href="#our-team">Team</a></li>
                 <li><a href="#contact-us">Contact</a></li>
-                <i class="ri-menu-3-fill"></i>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function () {
-                        // Add an event listener to the menu icon
-                        document.getElementById('menu-icon').addEventListener('click', function () {
-                            // Toggle the 'show' class on the mobile menu
-                            document.querySelector('.mobile-menu').classList.toggle('show');
-                        });
-                    });
-                </script>
+                <i onclick=showSidebar() class="ri-menu-3-fill"></i>
+            </ul>
+            <ul class="sidebar">
+                <i onclick=closeSidebar() class="ri-close-line"></i>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#our-team">Team</a></li>
+                <li><a href="#contact-us">Contact</a></li>
+            </ul>
+            <script>
+                function showSidebar() {
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'flex'
+                }
+                function closeSidebar() {
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display = 'none'
+                }
+            </script>
+        </div>
+    </div>
+    <div id="home">
+        <div class="home-text">
+            <h3 class="text1">Welcome</h3>
+            <h4 class="text2">To</h4>
+            <h3 class="text3">Linux Club</h3>
+        </div>
+        <div class="home-image">
+            <img src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\Home page earth.png">
+        </div>
+    </div>
+    <div class="about">
+        <h4 class="bottom-line"><span> Empowering Linux </span></h4>
+        <p class="about-text">Fostering innovation in open-source tech, empowering students<br> through skill
+            development and community collaboration.</p>
+    </div>
+    <div class="sponsor">
+        <h2 class="sponsor-text">Sponsored <span>by</span>.</h2>
+        <div class="companies-logo">
+            <a href="https://secops.group/" target="_blank"><img class="secops"
+                    src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\image-PhotoRoom.png-PhotoRoom.png"></a>
+            <a href="https://unstop.com/" target="_blank"><img class="unstop" src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\Unstop-Logo-Blue-Large.png"></a>
+        </div>
+    </div>
+    <div class="linux-club">
+        <h2 class="sponsor-text">Why <span>Linux Club</span>?</h2>
+        <div class="row-1">
+            <div class="box-1">
+                <h5 class="box-head">Leadership<br>Opportunity</h5>
+                <hr class="box-line">
+                <p class="box-text">Embrace the chance to assume pivotal roles<br> within the club. You'll be at the
+                    forefront<br>of organizing captivating events, enlightening<br>workshops, and enriching
+                    tutorials.</p>
+            </div>
+            <div class="box-1">
+                <h5 class="box-head">Skill<br>Development</h5>
+                <hr class="box-line">
+                <p class="box-text">Forge your skills in Linux and open-source<br>technologies, gaining invaluable
+                    hands-on<br>experience that will set you apart in the eyes<br>of future employers.</p>
             </div>
         </div>
-        <div id="home">
-            <div class="home-text">
-                <h3 class="text1">Welcome</h3>
-                <h4 class="text2">To</h4>
-                <h3 class="text3">Linux Club</h3>
+        <div class="row-1">
+            <div class="box-1">
+                <h5 class="box-head">Networking<br>Opportunity</h5>
+                <hr class="box-line">
+                <p class="box-text">Connect with kindred spirits who share your<br>Linux fervor. Our club serves
+                    asthe perfect<br>arena for networking and collaboration with<br>individuals from diverse
+                    backgrounds.</p>
             </div>
-            <div class="home-image">
-                <img src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\Home page earth.png">
+            <div class="box-1">
+                <h5 class="box-head">Skill<br>Development</h5>
+                <hr class="box-line">
+                <p class="box-text">Be an integral part of a community actively<br>contributing to open-source
+                    projects. Your<br>contributions can leave a lasting impact on<br>the global tech community.</p>
             </div>
         </div>
-        <div class="about">
-            <h4 class="bottom-line"><span> Empowering Linux </span></h4>
 
-            <p class="about-text">Fostering innovation in open-source tech, empowering students<br> through skill
-                development and community collaboration.</p>
-        </div>
-        <div class="sponsor">
-            <h2 class="sponsor-text">Sponsored <span>by</span>.</h2>
-            <div class="companies-logo">
-                <img class="secops"
-                    src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\image-PhotoRoom.png-PhotoRoom.png">
-                <img class="unstop"
-                    src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\Unstop-Logo-Blue-Large.png">
+    </div>
+    <div id="events">
+        <h2 class="sponsor-text">Upcoming <span>Events</span>.</h2>
+        <div class="event-box">
+            <div class="event1">
+                <img class="event-img"
+                    src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\images.png"><!--Size should 224px X 224px-->
+                <h5 class="event-heading">Capture The Flag</h5>
+                <h6 class="event-location">VIT Bhopal University</h6>
+                <button>Register Now</button>
+            </div>
+            <div class="event1">
+                <img class="event-img"
+                    src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\download.png"><!--Size should 224px X 224px-->
+                <h5 class="event-heading">Silent Disco</h5>
+                <h6 class="event-location">VIT Bhopal University</h6>
+                <button>Register Now</button>
             </div>
         </div>
-        <div class="linux-club">
-            <h2 class="sponsor-text">Why <span>Linux Club</span>?</h2>
-            <div class="row-1">
-                <div class="box-1">
-                    <h5 class="box-head">Leadership<br>Opportunity</h5>
-                    <hr class="box-line">
-                    <p class="box-text">Embrace the chance to assume pivotal roles<br> within the club. You'll be at the
-                        forefront<br>of organizing captivating events, enlightening<br>workshops, and enriching
-                        tutorials.</p>
+    </div>
+    <div class="faculty">
+        <h2 class="sponsor-text">Faculty <span>Coordinators</span>.</h2>
+        <h4 class="faculty-sub">In Guidance of </h4>
+        <div class="faculty-box">
+            <div class="faculty1">
+                <img src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\pushpindersinghpatheja.jpg">
+                <h4 class="faculty-text">Dr. Pushpinder Singh Patheja</h4>
+                <h6 class="faculty-subtext">Coordinator</h6>
+            </div>
+            <div class="faculty1">
+                <img src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\ramsir.jpeg">
+                <h4 class="faculty-text">Dr. Ram Kumar</h4>
+                <h6 class="faculty-subtext">Co-Coordinator</h6>
+            </div>
+        </div>
+    </div>
+    <div id="our-team">
+        <h2 class="sponsor-text">Our <span>Team</span>.</h2>
+        <div class="trans-box">
+            <div class="row-team">
+                <div class="member1">
+                    <img class="member-img"
+                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\38-removebg-preview.png">
+                    <h4 class="member-name">Mansi<br>Bakhshi</h4>
+                    <h6 class="member-post">President</h6>
                 </div>
-                <div class="box-1">
-                    <h5 class="box-head">Skill<br>Development</h5>
-                    <hr class="box-line">
-                    <p class="box-text">Forge your skills in Linux and open-source<br>technologies, gaining invaluable
-                        hands-on<br>experience that will set you apart in the eyes<br>of future employers.</p>
+                <div class="member1">
+                    <img class="member-img"
+                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\37-removebg-preview.png">
+                    <h4 class="member-name">Parv<br>Daga</h4>
+                    <h6 class="member-post">Vice-President</h6>
+                </div>
+                <div class="member1">
+                    <img class="member-img"
+                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\43-removebg-preview.png">
+                    <h4 class="member-name">Manan<br>Kohli</h4>
+                    <h6 class="member-post">Secretary & <br>Finance Lead</h6>
                 </div>
             </div>
-            <div class="row-1">
-                <div class="box-1">
-                    <h5 class="box-head">Networking<br>Opportunity</h5>
-                    <hr class="box-line">
-                    <p class="box-text">Connect with kindred spirits who share your<br>Linux fervor. Our club serves
-                        asthe perfect<br>arena for networking and collaboration with<br>individuals from diverse
-                        backgrounds.</p>
+            <hr class="team-lines">
+            <div class="row-team">
+                <div class="member1">
+                    <img class="member-img"
+                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\39-removebg-preview.png">
+                    <h4 class="member-name">Rakshita<br>Singh</h4>
+                    <h6 class="member-post">Event Lead</h6>
                 </div>
-                <div class="box-1">
-                    <h5 class="box-head">Skill<br>Development</h5>
-                    <hr class="box-line">
-                    <p class="box-text">Be an integral part of a community actively<br>contributing to open-source
-                        projects. Your<br>contributions can leave a lasting impact on<br>the global tech community.</p>
+                <div class="member1">
+                    <img class="member-img"
+                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\40-removebg-preview.png">
+                    <h4 class="member-name">Bhuvika<br>Aggarwal</h4>
+                    <h6 class="member-post">PR & Outreach<br>Lead</h6>
+                </div>
+                <div class="member1">
+                    <img class="member-img"
+                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\45-removebg-preview.png">
+                    <h4 class="member-name">Yashwardhan<br>Rastogi</h4>
+                    <h6 class="member-post">Technical Lead</h6>
+                </div>
+            </div>
+            <hr class="team-lines">
+            <div class="row-team">
+                <div class="member1">
+                    <img class="member-img"
+                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\42-removebg-preview.png">
+                    <h4 class="member-name">Mannat<br>Pal</h4>
+                    <h6 class="member-post">Content lead</h6>
+                </div>
+                <div class="member1">
+                    <img class="member-img"
+                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\41-removebg-preview.png">
+                    <h4 class="member-name">Devika<br>Nair</h4>
+                    <h6 class="member-post">Design Lead</h6>
+                </div>
+                <div class="member1">
+                    <img class="member-img"
+                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\44-removebg-preview.png">
+                    <h4 class="member-name">Ambika<br>Sharma</h4>
+                    <h6 class="member-post">Social Media<br>Lead</h6>
                 </div>
             </div>
 
-        </div>
-        <div id="events">
-            <h2 class="sponsor-text">Upcoming <span>Events</span>.</h2>
-            <div class="event-box">
-                <div class="event1">
-                    <img class="event-img"
-                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\images.png"><!--Size should 224px X 224px-->
-                    <h5 class="event-heading">Capture The Flag</h5>
-                    <h6 class="event-location">VIT Bhopal University</h6>
-                    <button>Register Now</button>
-                </div>
-                <div class="event1">
-                    <img class="event-img"
-                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\download.png"><!--Size should 224px X 224px-->
-                    <h5 class="event-heading">Silent Disco</h5>
-                    <h6 class="event-location">VIT Bhopal University</h6>
-                    <button>Register Now</button>
-                </div>
-            </div>
-        </div>
-        <div class="faculty">
-            <h2 class="sponsor-text">Faculty <span>Coordinators</span>.</h2>
-            <h4 class="faculty-sub">In Guidance of </h4>
-            <div class="faculty-box">
-                <div class="faculty1">
-                    <img src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\pushpindersinghpatheja.jpg">
-                    <h4 class="faculty-text">Dr. Pushpinder Singh Patheja</h4>
-                    <h6 class="faculty-subtext">Coordinator</h6>
-                </div>
-                <div class="faculty1">
-                    <img src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\ramsir.jpeg">
-                    <h4 class="faculty-text">Dr. Ram Kumar</h4>
-                    <h6 class="faculty-subtext">Co-Coordinator</h6>
-                </div>
-            </div>
-        </div>
-        <div id="our-team">
-            <h2 class="sponsor-text">Our <span>Team</span>.</h2>
-            <div class="trans-box">
-                <div class="row-team">
-                    <div class="member1">
-                        <img class="member-img"
-                            src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\38-removebg-preview.png">
-                        <h4 class="member-name">Mansi<br>Bakhshi</h4>
-                        <h6 class="member-post">President</h6>
-                    </div>
-                    <div class="member1">
-                        <img class="member-img"
-                            src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\37-removebg-preview.png">
-                        <h4 class="member-name">Parv<br>Daga</h4>
-                        <h6 class="member-post">Vice-President</h6>
-                    </div>
-                    <div class="member1">
-                        <img class="member-img"
-                            src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\43-removebg-preview.png">
-                        <h4 class="member-name">Manan<br>Kohli</h4>
-                        <h6 class="member-post">Secretary & <br>Finance Lead</h6>
-                    </div>
-                </div>
-                <hr class="team-lines">
-                <div class="row-team">
-                    <div class="member1">
-                        <img class="member-img"
-                            src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\39-removebg-preview.png">
-                        <h4 class="member-name">Rakshita<br>Singh</h4>
-                        <h6 class="member-post">Event Lead</h6>
-                    </div>
-                    <div class="member1">
-                        <img class="member-img"
-                            src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\40-removebg-preview.png">
-                        <h4 class="member-name">Bhuvika<br>Aggarwal</h4>
-                        <h6 class="member-post">PR & Outreach<br>Lead</h6>
-                    </div>
-                    <div class="member1">
-                        <img class="member-img"
-                            src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\45-removebg-preview.png">
-                        <h4 class="member-name">Yashwardhan<br>Rastogi</h4>
-                        <h6 class="member-post">Technical Lead</h6>
-                    </div>
-                </div>
-                <hr class="team-lines">
-                <div class="row-team">
-                    <div class="member1">
-                        <img class="member-img"
-                            src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\42-removebg-preview.png">
-                        <h4 class="member-name">Mannat<br>Pal</h4>
-                        <h6 class="member-post">Content lead</h6>
-                    </div>
-                    <div class="member1">
-                        <img class="member-img"
-                            src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\41-removebg-preview.png">
-                        <h4 class="member-name">Devika<br>Nair</h4>
-                        <h6 class="member-post">Design Lead</h6>
-                    </div>
-                    <div class="member1">
-                        <img class="member-img"
-                            src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\44-removebg-preview.png">
-                        <h4 class="member-name">Ambika<br>Sharma</h4>
-                        <h6 class="member-post">Social Media<br>Lead</h6>
-                    </div>
-                </div>
 
 
+        </div>
+    </div>
+    <div id="contact-us">
+        <h2 class="sponsor-text">Contact <span>Us</span>.</h2>
+        <div class="contact-box">
+            <div class="address">
+                <h4 class="address-heading">Our Location</h4>
+                <p class="address-text">VIT Bhopal University<br>Kothri Kalan,<br>Sehore - 466114,<br>Madhya
+                    Pradesh,India</p>
+                <h4 class="address-heading">Email</h4>
+                <p class="address-text">linuxclubvitb@gmail.com</p>
+                <h4 class="address-heading">Social Media</h4>
+                <a href="https://www.instagram.com/linuxvitb?igsh=MXhscjBjMHVzb2Nncg==" target="_blank"><i
+                        class="ri-instagram-line"></i></a>
+                <a href="https://www.linkedin.com/company/linux-club-vitb" target="_blank"><i
+                        class="ri-linkedin-fill"></i></a>
+            </div>
+            <div class="form-box">
 
+                <form onsubmit="sendEmail(); reset(); return false;">
+                    <h4 class="message">Message Us..</h4>
+                    <label for="name">Full Name:</label><br>
+                    <input type="text" id="name" placeholder="Enter your name" name="name" required>
+                    <br><br>
+                    <label for="email">Email Address:</label><br>
+                    <input type="email" id="email" placeholder="Enter your email" name="email" required>
+                    <br><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" placeholder="Type your message..." rows="5"
+                        required></textarea>
+                    <br><br>
+                    <div style="text-align: center;">
+                        <button type="submit">Submit</button>
+                    </div>
+                    <script src="https://smtpjs.com/v3/smtp.js"></script>
+                    <script>
+                        function sendEmail() {
+                            Email.send({
+                                Host: "smtp.gmail.com",
+                                Username: "parvdaga29@gmail.com",
+                                Password: "Patrick@51400",
+                                To: 'parvdaga05@gmail.com',
+                                From: document.getElementById("email").value,
+                                Subject: "New Contact Form Enquiry",
+                                Body: "And this is the body"
+                            }).then(
+                                message => alert(message)
+                            );
+                        }
+                    </script>
+                </form>
             </div>
         </div>
-        <div id="contact-us">
-            <h2 class="sponsor-text">Contact <span>Us</span>.</h2>
-            <div class="contact-box">
-                <div class="address">
-                    <h4 class="address-heading">Our Location</h4>
-                    <p class="address-text">VIT Bhopal University<br>Kothri Kalan,<br>Sehore - 466114,<br>Madhya
-                        Pradesh,India</p>
-                    <h4 class="address-heading">Email</h4>
-                    <p class="address-text">linuxclubvitb@gmail.com</p>
-                    <h4 class="address-heading">Social Media</h4>
-                    <a href="https://www.instagram.com/linuxvitb?igsh=MXhscjBjMHVzb2Nncg==" target="_blank"><i
-                            class="ri-instagram-line"></i></a>
-                    <a href="https://www.linkedin.com/company/linux-club-vitb" target="_blank"><i
-                            class="ri-linkedin-fill"></i></a>
-                </div>
-                <div class="form-box">
-
-                    <form onsubmit="sendEmail(); reset(); return false;">
-                        <h4 class="message">Message Us..</h4>
-                        <label for="name">Full Name:</label><br>
-                        <input type="text" id="name" placeholder="Enter your name" name="name" required>
-                        <br><br>
-                        <label for="email">Email Address:</label><br>
-                        <input type="email" id="email" placeholder="Enter your email" name="email" required>
-                        <br><br>
-                        <label for="message">Message:</label><br>
-                        <textarea id="message" name="message" placeholder="Type your message..." rows="5"
-                            required></textarea>
-                        <br><br>
-                        <div style="text-align: center;">
-                            <button type="submit">Submit</button>
-                        </div>
-                        <script src="https://smtpjs.com/v3/smtp.js"></script>
-                        <script>
-                            function sendEmail() {
-                                Email.send({
-                                    Host: "smtp.gmail.com",
-                                    Username: "parvdaga29@gmail.com",
-                                    Password: "Patrick@51400",
-                                    To: 'parvdaga05@gmail.com',
-                                    From: document.getElementById("email").value,
-                                    Subject: "New Contact Form Enquiry",
-                                    Body: "And this is the body"
-                                }).then(
-                                    message => alert(message)
-                                );
-                            }
-                        </script>
-                    </form>
-                </div>
-            </div>
-        </div>
+    </div>
 
     </div>
     <footer>
