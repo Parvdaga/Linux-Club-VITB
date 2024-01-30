@@ -58,23 +58,38 @@ body {
     cursor: pointer;
 }
 
-.mobile-menu {
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 40vh;
+    width: 250px;
+    z-index: 999;
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    gap: 4vh;
+    background-color: #0C0422;
+    box-shadow: #191131 inset 2px;
+    opacity: 95%;
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    z-index: 1;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+    list-style-type: none;
 }
 
-.mobile-menu a {
-    padding: 15px;
-    text-align: center;
+.sidebar a {
     text-decoration: none;
     color: white;
     font-weight: 600;
+    transition: 2ms;
+    font-size: 1.3vw;
+}
+.sidebar li:hover{
+    
+    opacity: 50%;
+    width: 100%;
 }
 
 
@@ -96,10 +111,17 @@ body {
         font-size: 4vw;
         display: none;
     }
-    .mobile-menu.show {
-        display: flex;
+    .sidebar{
+        display: none;
+        position: absolute;
+        font-size:3vh;
+        width: 100px;
     }
-}
+    .sidebar a {
+        font-size: 2.5vh;
+    }
+    }
+
 
 #home {
     height: calc(100%-100px);
@@ -184,6 +206,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 15vh;
+    
 }
 
 .bottom-line {
@@ -210,6 +233,7 @@ body {
 .about-text {
     margin-top: 20vh;
     text-align: center;
+    animation: fadeIn 5s;
     color: white;
     letter-spacing: 0.7vw;
     font-size: 1.2vw;
@@ -241,7 +265,7 @@ body {
 
 .sponsor-text {
     color: #8602FA;
-    font-size: 2.5vw;
+    font-size: 3vw;
     text-align: center;
     font-weight: 500;
     letter-spacing: 0.6vw;
@@ -522,9 +546,9 @@ body {
 }
 
 .faculty1 img {
-    width: 120px;
+    width: 150px;
     margin-top: 5vh;
-    height: 120px;
+    height: 150px;
     border-radius: 50%;
 
 }
@@ -532,11 +556,13 @@ body {
 .faculty-text {
     color: white;
     font-size: 1.8vw;
+    font-weight: 350;
 }
 
 .faculty-subtext {
     color: #8602FA;
     margin-top: 2vh;
+    
     font-size: 1.4vw;
 }
 
@@ -562,7 +588,10 @@ body {
         height: 80px;
         margin-top: 2vh;
     }
-
+    .faculty-text{
+        font-size: 2vw;
+        font-weight: 400;
+    }
     .faculty-subtext {
         font-size: 1.6vw;
         margin-bottom: 2vh;
@@ -590,15 +619,15 @@ body {
     margin-left: 10%;
     text-align: center;
     display: flex;
-    gap: 8vw;
+    gap: 10vw;
     align-items: center;
     justify-content: center;
 
 }
 
 .member1 img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: none;
 }
@@ -743,7 +772,7 @@ form label {
 form input,form textarea {
     border: 0;
     padding: 10px 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     outline: none;
     background: white;
     font-size:1vw ;
@@ -809,6 +838,12 @@ form button:hover {
         width: 80%;
         margin-left: 10%;
         margin-top: 3vh;
+    }
+    .form textarea {
+        font-size: 3vh;
+    }
+    .form input{
+        font-size: 2vh;
     }
 
     .message {
@@ -981,7 +1016,9 @@ footer {
 
     .footer-social {
         margin-bottom: 2vh;
-        font-size: 6vw;
+    }
+    .footer-social a{
+        font-size: 3vh;
     }
     
 
