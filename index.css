@@ -86,8 +86,9 @@ body {
     transition: 2ms;
     font-size: 1.3vw;
 }
-.sidebar li:hover{
-    
+
+.sidebar li:hover {
+
     opacity: 50%;
     width: 100%;
 }
@@ -111,16 +112,18 @@ body {
         font-size: 4vw;
         display: none;
     }
-    .sidebar{
+
+    .sidebar {
         display: none;
         position: absolute;
-        font-size:3vh;
+        font-size: 3vh;
         width: 100px;
     }
+
     .sidebar a {
         font-size: 2.5vh;
     }
-    }
+}
 
 
 #home {
@@ -161,7 +164,7 @@ body {
 .home-image {
     width: 50%;
     height: 100%;
-    margin: 7vh 4vw 5vh 2vw;
+    margin: 30vh 4vw 5vh 2vw;
     text-align: center;
     justify-content: center;
 }
@@ -172,20 +175,51 @@ body {
     width: 25vw;
     height: auto;
 }
+.earth {
+    position: absolute;
+
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: url(earth5sr.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    box-shadow: inset 0 0 0px rgba(0, 0, 0, 1), 0 0 50px #8602FA;
+    border-radius: 50%;
+    animation: animateearth 100s linear infinite;
+}
+
+@keyframes animateearth {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 750px 0;
+    }
+}
+
 
 @media (max-width:600px) {
     .home {
         margin-top: 2vh;
+        display: inline;
     }
-
-    .home-image {
-        display: none;
+    
+    .earth{
+        width: 250px;
+        height: 250px;
+        margin-top: -70%;
+        left: 80%;
+        opacity: 70%;
+        
     }
-
     .home-text {
         width: 100%;
-        background-image: url("C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Home page earth.png");
         background-size: cover;
+        text-align: center;
+        margin-left: 30%;
 
     }
 
@@ -202,11 +236,11 @@ body {
     }
 }
 
+
 .about {
     align-items: center;
     justify-content: center;
     margin-top: 15vh;
-    
 }
 
 .bottom-line {
@@ -231,13 +265,50 @@ body {
 }
 
 .about-text {
-    margin-top: 20vh;
-    text-align: center;
-    animation: fadeIn 5s;
+    margin-top: 15vh;
+    white-space: nowrap;
     color: white;
-    letter-spacing: 0.7vw;
+    letter-spacing: 0.5vw;
     font-size: 1.2vw;
     line-height: 6vh;
+    margin-left: 20%;
+    overflow: hidden;
+}
+
+.line1 {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid #8602FA;
+    /* Adjust thickness and color as needed */
+    margin-bottom: 5px;
+    /* Adjust spacing between lines */
+    animation: typing1 10s steps(80, end) infinite;
+}
+
+@keyframes typing1 {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+.line1 {
+    animation-fill-mode: forwards;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #8602FA
+    }
 }
 
 @media (max-width:600px) {
@@ -251,11 +322,16 @@ body {
     }
 
     .about-text {
-        margin-top: 8vh;
+        margin-top: 5vh;
         font-size: 2vw;
+
         letter-spacing: 0.4vw;
+        margin-left: 12%;
+        animation: typing1 0s steps(80, end) infinite
     }
 }
+
+
 
 .sponsor {
     margin-top: 20vh;
@@ -308,7 +384,7 @@ body {
 
 @media (max-width:600px) {
     .sponsor {
-        margin-top: 10vh;
+        margin-top: 5vh;
     }
 
     .sponsor-text {
@@ -562,7 +638,7 @@ body {
 .faculty-subtext {
     color: #8602FA;
     margin-top: 2vh;
-    
+
     font-size: 1.4vw;
 }
 
@@ -588,10 +664,12 @@ body {
         height: 80px;
         margin-top: 2vh;
     }
-    .faculty-text{
+
+    .faculty-text {
         font-size: 2vw;
         font-weight: 400;
     }
+
     .faculty-subtext {
         font-size: 1.6vw;
         margin-bottom: 2vh;
@@ -718,7 +796,8 @@ body {
     margin-top: -1vh;
     line-height: 4vh;
 }
-.address a{
+
+.address a {
     text-decoration: none;
     font-size: 2vw;
 }
@@ -769,13 +848,14 @@ form label {
     margin-bottom: -2vh;
 }
 
-form input,form textarea {
+form input,
+form textarea {
     border: 0;
     padding: 10px 15px;
     border-radius: 10px;
     outline: none;
     background: white;
-    font-size:1vw ;
+    font-size: 1vw;
     margin-bottom: -3vh;
 }
 
@@ -839,10 +919,12 @@ form button:hover {
         margin-left: 10%;
         margin-top: 3vh;
     }
+
     .form textarea {
         font-size: 3vh;
     }
-    .form input{
+
+    .form input {
         font-size: 2vh;
     }
 
@@ -946,10 +1028,12 @@ footer {
     margin-left: 5%;
 
 }
-.footer-social a{
+
+.footer-social a {
     text-decoration: none;
     font-size: 2vw;
-    color: white;}
+    color: white;
+}
 
 .copyright {
     text-align: center;
@@ -1017,9 +1101,10 @@ footer {
     .footer-social {
         margin-bottom: 2vh;
     }
-    .footer-social a{
+
+    .footer-social a {
         font-size: 3vh;
     }
-    
+
 
 }
