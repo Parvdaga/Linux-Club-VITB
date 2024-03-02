@@ -175,9 +175,9 @@ body {
     width: 25vw;
     height: auto;
 }
+
 .earth {
     position: absolute;
-
     left: 70%;
     transform: translate(-50%, -50%);
     width: 300px;
@@ -206,15 +206,16 @@ body {
         margin-top: 2vh;
         display: inline;
     }
-    
-    .earth{
-        width: 250px;
-        height: 250px;
-        margin-top: -70%;
-        left: 80%;
-        opacity: 70%;
-        
+
+    .earth {
+        width: 50vw;
+        height: 23vh;
+        margin-top: -25%;
+        left: 50%;
+        opacity: 35%;
+
     }
+
     .home-text {
         width: 100%;
         background-size: cover;
@@ -426,6 +427,7 @@ body {
 .box-1 {
     background-color: #290460;
     color: white;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
     text-align: center;
     height: 55vh;
     border-radius: 10%;
@@ -503,55 +505,62 @@ body {
     gap: 7vw;
 }
 
-.event1 {
-    background-color: #1D0C4D;
-    border-radius: 15px;
-    text-align: center;
-    width: 25vw;
-    height: auto;
-
+.container {
+    width: 350px;
+    height: 500px;
+    perspective: 800px;
 }
 
-.event-img {
-    margin-top: 5vh;
-    background-color: #8602FA;
-    width: 20vw;
-    height: auto;
-    border-radius: 20px;
-}
-
-.event-heading {
-    color: #8602FA;
-    font-size: 2vw;
-}
-
-.event-location {
-    color: white;
-    margin-top: -2vh;
-    font-size: 1.4vw;
-    font-weight: 400;
-}
-
-.event-box button {
-    display: inline-block;
-    padding: 1.5vh 1.5vw;
-    border: none;
-    font-family: quicksand;
-    font-weight: 500;
-    margin-bottom: 6vh;
-    font-size: 1.5vw;
-    border-radius: 50px;
-    text-align: center;
-    text-decoration: none;
-    background-color: white;
-    color: #290460;
+.container:hover>.card {
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transform: rotateY(180deg);
 }
 
-.event-box button:hover {
-    background-color: #8602FA;
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.front-1,.front-2,
+.back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-1 {
+    background: url(Third-Eye-Quest.png);
+}
+.front-2{
+    background: url(Silent-disco.png);
+}
+
+
+.back {
+    background: rgb(29, 04, 60 );
+    transform: rotateY(180deg);
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.event-name{
+    color: #8602FA;
+    font-size: 2.5vw;
+}
+.event-desc{
     color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    line-height: 3.5vh;
 }
 
 @media (max-width:600px) {
@@ -561,30 +570,25 @@ body {
 
     .event-box {
         margin-top: 7vh;
-        flex-direction: column;
         gap: 5vh;
     }
-
-    .event1 {
-        width: 80%;
+    .container{
+        width: 150px;
+        height: 250px;
     }
 
-    .event-img {
-        width: 40vw;
+    .front-1{
+        background-image: url(Third-Eye-Quest-1.png);
     }
-
-    .event-heading {
-        font-size: 6vw;
+    .front-2{
+        background-image: url(Silent-disco-1.png);
     }
-
-    .event-location {
-        font-size: 4.5vw;
+    .event-name{
+        font-size: 4vw;
     }
-
-    .event-box button {
-        padding: 1vh 2.5vw;
-        margin-top: -4vh;
-        font-size: 3vw;
+    .event-desc{
+        font-size: 1.2vw;
+        line-height: 2vh;
     }
 }
 
@@ -616,6 +620,7 @@ body {
     width: 30vw;
     align-items: center;
     height: auto;
+    box-shadow: 0 0 7px 4px rgba(50, 50, 50, 0.25);
     justify-content: center;
     border: white solid 0.01em;
     border-radius: 30px;
