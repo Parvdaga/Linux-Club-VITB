@@ -899,6 +899,7 @@ form button:hover {
     .contact-box {
         flex-direction: column;
         margin-top: 4vh;
+        display: none;
     }
 
     .address {
