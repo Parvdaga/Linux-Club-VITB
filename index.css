@@ -923,6 +923,7 @@ form button:hover {
         width: 80%;
         margin-left: 10%;
         margin-top: 3vh;
+        display: none;
     }
 
     .form textarea {
