@@ -15,6 +15,28 @@
 </head>
 
 <body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <script>
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+
+        window.addEventListener("mousemove", function(e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            cursorOutline.animate(
+                [
+                    { left: cursorOutline.style.left, top: cursorOutline.style.top },
+                    { left: `${posX}px`, top: `${posY}px` }
+                ],
+                { duration: 500, fill: "forwards" }
+            );
+        });
+    </script>
 
     <div class="main">
         <div class=nav>
@@ -25,7 +47,6 @@
                 <li><a href="#our-team">Team</a></li>
                 <li><a href="#contact-us">Contact</a></li>
                 <li><a href="https://forms.gle/gZqEbXnRhti4Q8wq8" target="_blank">Join Us</a></li>
-
                 <i onclick=showSidebar() class="ri-menu-3-fill"></i>
             </ul>
             <ul class="sidebar">
@@ -35,7 +56,6 @@
                 <li><a href="#our-team">Team</a></li>
                 <li><a href="#contact-us">Contact</a></li>
                 <li><a href="https://forms.gle/gZqEbXnRhti4Q8wq8" target="_blank">Join Us</a></li>
-
             </ul>
             <script>
                 function showSidebar() {
@@ -188,7 +208,7 @@
                     <img class="member-img"
                         src="Images\250X250\40-removebg-preview.png">
                     <h4 class="member-name">Bhuvika<br>Aggarwal</h4>
-                    <h6 class="member-post">Outreach<br>Lead</h6>
+                    <h6 class="member-post">PR & Outreach<br>Lead</h6>
                 </div>
                 <div class="member1">
                     <img class="member-img"
