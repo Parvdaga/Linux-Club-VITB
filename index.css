@@ -4,6 +4,64 @@ body {
     margin: 0;
     cursor: none;
 }
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0F0727;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-text {
+    font-family:moon dance;
+    font-size: 70px;
+    font-weight: 300;
+    color: #8602FA;
+    margin-bottom: 20px;
+}
+.loading-text-color{
+    font-size: 70px;
+    font-family: quicksand;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+/* .loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+} */
+
+@media (max-width:600px) {
+    .loading-text{
+        font-size: 35px;
+    }
+    .loading-text-color{
+        font-size: 35px;
+    }
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 .cursor-dot{
     width: 5px;
     height: 5px;
@@ -22,6 +80,15 @@ body {
     border-radius: 50%;
     z-index: 1;
     pointer-events: none;
+}
+
+@media (max-width:600px) {
+    .cursor-dot{
+        display: none;
+    }
+    .cursor-outline{
+        display: none;
+    }
 }
 
 /*color: #8602FA;*/
@@ -256,7 +323,32 @@ body {
         font-size: 7vw;
     }
 }
+@media (min-width:1000px) {
+    .earth{
+        width: 250px;
+        height: 250px;
+    }
+}
+@media (min-width:1300px) {
+    .earth{
+    width: 300px;
+    height: 300px;}
+}
+@media (min-width:1600px) {
+    .earth{
+        margin-top: -100px;
+        width: 350px;
+        height: 350px;
+    }
+}
+@media (min-width:2300px) {
+    .earth{
+        margin-top: 0px;
+        width: 500px;
+        height: 500px;
+    }
 
+}
 
 .about {
     align-items: center;
@@ -393,13 +485,13 @@ body {
     filter: grayscale(0%);
 }
 
-.unstop {
-    width: 10vw;
+.Give-my-Certificate {
+    width: 20vw;
     height: auto;
     filter: grayscale(100%);
 }
 
-.unstop:hover {
+.Give-my-Certificate:hover {
     filter: grayscale(0%);
 }
 
@@ -593,10 +685,13 @@ body {
         gap: 5vh;
     }
     .container{
-        width: 150px;
-        height: 250px;
+        width: 230px;
+        height: 270px;
     }
-
+    .front-1,.front-2,
+    .back {
+        border-radius: 1.7rem;
+    }
     .front-1{
         background-image: url(Third-Eye-Quest-1.png);
     }
@@ -607,8 +702,36 @@ body {
         font-size: 4vw;
     }
     .event-desc{
-        font-size: 1.2vw;
-        line-height: 2vh;
+        font-size: 1.9vw;
+        line-height: 1.35vh;
+    }
+}
+@media (min-width:1600px) {
+    .container{
+        width: 400px;
+        height: 600px;
+    }
+}
+@media (min-width:2300px) {
+    .container{
+        width: 500px;
+        height: 750px;
+    }
+    .event-name{
+        font-size: 60px
+    }
+    .event-desc{
+        font-size: 20px;
+    }
+    .front-1,.front-2,
+    .back {
+        border-radius: 2.3rem;
+    }
+    .front-1{
+        background-image: url(Third-Eye-Quest-2.png);
+    }
+    .front-2{
+        background-image: url(Silent-disco-2.png);
     }
 }
 
@@ -700,6 +823,13 @@ body {
         margin-bottom: 2vh;
     }
 }
+@media (min-width:2000px) {
+    .faculty1 img {
+        width: 250px;
+        height: 250px;
+    }
+
+}
 
 #our-team {
     margin-top: 30vh;
@@ -784,8 +914,18 @@ body {
         font-size: 2vw;
     }
 }
-
-
+@media (min-width:1600px) {
+    .member1 img {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (min-width:2300px) {
+    .member1 img {
+        width: 250px;
+        height: 250px;
+    }
+}
 
 
 #contact-us {
@@ -969,7 +1109,11 @@ form button:hover {
         font-size: 3vw;
     }
 }
-
+@media (min-width:2000px) {
+    form{
+        gap: 1vh;
+    }
+}
 
 
 footer {
