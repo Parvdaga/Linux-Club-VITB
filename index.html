@@ -4,25 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Welcome to Linux Club VITB - Empowering students through collaboration and skill-building in Linux and open-source technologies. Join us for events, workshops, and tutorials.">
+    <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" type="image/jpg" href="favicon.png">
     <title>Linux Club VITB</title>
 </head>
 
 <body>
+    <div class="loading-overlay">
+        <div class="loading-text" data-aos="fade-right" data-aos="fade-left">Hello...<br><span
+                class="loading-text-color">Namaste..</span></div>
+        <div class="loading-spinner"></div>
+    </div>
+    <script>
+        setTimeout(function () {
+            var loadingOverlay = document.querySelector('.loading-overlay');
+            loadingOverlay.parentNode.removeChild(loadingOverlay);
+        }, 2000);
+    </script>
 
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <script src="cursor.js" defer></script>
     <div class="main">
         <div class=nav>
-            <img src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\logo.png">
+            <img src="Images\logo.png" alt="Linux Club VITB Logo">
             <ul class="nav-part2">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#events">Events</a></li>
                 <li><a href="#our-team">Team</a></li>
                 <li><a href="#contact-us">Contact</a></li>
+                <li><a href="https://forms.gle/gZqEbXnRhti4Q8wq8" target="_blank">Join Us</a></li>
                 <i onclick=showSidebar() class="ri-menu-3-fill"></i>
             </ul>
             <ul class="sidebar">
@@ -31,199 +50,200 @@
                 <li><a href="#events">Events</a></li>
                 <li><a href="#our-team">Team</a></li>
                 <li><a href="#contact-us">Contact</a></li>
+                <li><a href="https://forms.gle/gZqEbXnRhti4Q8wq8" target="_blank">Join Us</a></li>
             </ul>
-            <script>
-                function showSidebar() {
-                    const sidebar = document.querySelector('.sidebar')
-                    sidebar.style.display = 'flex'
-                }
-                function closeSidebar() {
-                    const sidebar = document.querySelector('.sidebar')
-                    sidebar.style.display = 'none'
-                }
-            </script>
+            <script src="sidebar.js" defer></script>
         </div>
     </div>
     <div id="home">
-        <div class="home-text">
+        <div class="home-text" data-aos="fade-up">
             <h3 class="text1">Welcome</h3>
             <h4 class="text2">To</h4>
             <h3 class="text3">Linux Club</h3>
         </div>
         <div class="home-image">
-            <img src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\Home page earth.png">
+            <div class="earth">
+            </div>
         </div>
     </div>
     <div class="about">
-        <h4 class="bottom-line"><span> Empowering Linux </span></h4>
-        <p class="about-text">Fostering innovation in open-source tech, empowering students<br> through skill
-            development and community collaboration.</p>
+        <h4 class="bottom-line" data-aos="fade-up"><span> Empowering Linux </span></h4>
+        <div class="about-text" data-aos="fade-up">
+            <div class="line1">Empowering Student through Collaboration & Skill-Building.</div>
+        </div>
     </div>
     <div class="sponsor">
-        <h2 class="sponsor-text">Sponsored <span>by</span>.</h2>
-        <div class="companies-logo">
+        <h2 class="sponsor-text" data-aos="fade-up">Powered <span>by</span>.</h2>
+        <div class="companies-logo" data-aos="zoom-in">
             <a href="https://secops.group/" target="_blank"><img class="secops"
-                    src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\image-PhotoRoom.png-PhotoRoom.png"></a>
-            <a href="https://unstop.com/" target="_blank"><img class="unstop" src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\Unstop-Logo-Blue-Large.png"></a>
+                    src="Images\image-PhotoRoom.png-PhotoRoom.png" alt="SecOps Group Logo"></a>
+            <a href="https://givemycertificate.com/" target="_blank"><img class="Give-my-Certificate"
+                    src="Images/logo1.png" alt="Give My Certificate Logo"></a>
         </div>
     </div>
     <div class="linux-club">
-        <h2 class="sponsor-text">Why <span>Linux Club</span>?</h2>
+        <h2 class="sponsor-text" data-aos="fade-up">Why <span>Linux Club</span>?</h2>
         <div class="row-1">
-            <div class="box-1">
-                <h5 class="box-head">Leadership<br>Opportunity</h5>
-                <hr class="box-line">
-                <p class="box-text">Embrace the chance to assume pivotal roles<br> within the club. You'll be at the
+            <div class="box-1" data-aos="fade-up">
+                <h5 class="box-head" data-aos="fade-up">Leadership<br>Opportunity</h5>
+                <hr class="box-line" data-aos="fade-up">
+                <p class="box-text" data-aos="fade-up">Embrace the chance to assume pivotal roles<br> within the club.
+                    You'll be at the
                     forefront<br>of organizing captivating events, enlightening<br>workshops, and enriching
                     tutorials.</p>
             </div>
-            <div class="box-1">
-                <h5 class="box-head">Skill<br>Development</h5>
-                <hr class="box-line">
-                <p class="box-text">Forge your skills in Linux and open-source<br>technologies, gaining invaluable
+            <div class="box-1" data-aos="fade-up">
+                <h5 class="box-head" data-aos="fade-up">Skill<br>Development</h5>
+                <hr class="box-line" data-aos="fade-up">
+                <p class="box-text" data-aos="fade-up">Forge your skills in Linux and open-source<br>technologies,
+                    gaining invaluable
                     hands-on<br>experience that will set you apart in the eyes<br>of future employers.</p>
             </div>
         </div>
         <div class="row-1">
-            <div class="box-1">
-                <h5 class="box-head">Networking<br>Opportunity</h5>
-                <hr class="box-line">
-                <p class="box-text">Connect with kindred spirits who share your<br>Linux fervor. Our club serves
+            <div class="box-1" data-aos="fade-up">
+                <h5 class="box-head" data-aos="fade-up">Networking<br>Opportunity</h5>
+                <hr class="box-line" data-aos="fade-up">
+                <p class="box-text" data-aos="fade-up">Connect with kindred spirits who share your<br>Linux fervor. Our
+                    club serves
                     asthe perfect<br>arena for networking and collaboration with<br>individuals from diverse
                     backgrounds.</p>
             </div>
-            <div class="box-1">
-                <h5 class="box-head">Skill<br>Development</h5>
-                <hr class="box-line">
-                <p class="box-text">Be an integral part of a community actively<br>contributing to open-source
+            <div class="box-1" data-aos="fade-up">
+                <h5 class="box-head" data-aos="fade-up">Skill<br>Development</h5>
+                <hr class="box-line" data-aos="fade-up">
+                <p class="box-text" data-aos="fade-up">Be an integral part of a community actively<br>contributing to
+                    open-source
                     projects. Your<br>contributions can leave a lasting impact on<br>the global tech community.</p>
             </div>
         </div>
 
     </div>
     <div id="events">
-        <h2 class="sponsor-text">Upcoming <span>Events</span>.</h2>
+        <h2 class="sponsor-text" data-aos="fade-up">Events <span>Archive</span>.</h2>
         <div class="event-box">
-            <div class="event1">
-                <img class="event-img"
-                    src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\images.png"><!--Size should 224px X 224px-->
-                <h5 class="event-heading">Capture The Flag</h5>
-                <h6 class="event-location">VIT Bhopal University</h6>
-                <button>Register Now</button>
+            <div class="container" data-aos="fade-up">
+                <div class="card">
+                    <div class="front-1"></div>
+                    <div class="back">
+                        <h1 class="event-name">Third Eye Quest</h1>
+                        <p class="event-desc">Calling all cyber sleuths! Third Eye Quest, part of AdVITya fest,
+                            challenged you to a thrilling two-phase adventure (February 19th & 22nd, 2024). You cracked
+                            cryptic codes and navigated online mazes in "Digital Infiltration" (Phase 1). You then
+                            pushed your limits in the offline "Extraction Point" (Phase 2) for top-secret intel. You
+                            competed, collaborated, and conquered this adrenaline-pumping quest!</p>
+                    </div>
+                </div>
             </div>
-            <div class="event1">
-                <img class="event-img"
-                    src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\download.png"><!--Size should 224px X 224px-->
-                <h5 class="event-heading">Silent Disco</h5>
-                <h6 class="event-location">VIT Bhopal University</h6>
-                <button>Register Now</button>
+            <div class="container" data-aos="fade-up">
+                <div class="card">
+                    <div class="front-2"></div>
+                    <div class="back">
+                        <h1 class="event-name">Silent Disco</h1>
+                        <p class="event-desc">AdVITya Fest's Silent Disco on February 23rd, 2024, was a vibrant event
+                            filled with music and dance. Participants grooved to various genres using headphones,
+                            creating a unique, silent yet energetic atmosphere. Face-painting and a photo booth added to
+                            the merriment, making it a truly memorable experience for all involved. From enthusiastic
+                            dancers to dedicated volunteers, the event's spirit remained high until the very end.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="faculty">
-        <h2 class="sponsor-text">Faculty <span>Coordinators</span>.</h2>
-        <h4 class="faculty-sub">In Guidance of </h4>
-        <div class="faculty-box">
-            <div class="faculty1">
-                <img src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\pushpindersinghpatheja.jpg">
-                <h4 class="faculty-text">Dr. Pushpinder Singh Patheja</h4>
-                <h6 class="faculty-subtext">Coordinator</h6>
+        <h2 class="sponsor-text" data-aos="fade-up">Faculty <span>Coordinators</span>.</h2>
+        <h4 class="faculty-sub" data-aos="fade-up">In Guidance of </h4>
+        <div class="faculty-box" data-aos="fade-up">
+            <div class="faculty1" data-aos="fade-up">
+                <img src="Images\pushpindersinghpatheja.jpg" alt="Dr. Pushpinder Singh Patheja" data-aos="fade-up">
+                <h4 class="faculty-text" data-aos="fade-up">Dr. Pushpinder Singh Patheja</h4>
+                <h6 class="faculty-subtext" data-aos="fade-up">Coordinator</h6>
             </div>
-            <div class="faculty1">
-                <img src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\ramsir.jpeg">
-                <h4 class="faculty-text">Dr. Ram Kumar</h4>
-                <h6 class="faculty-subtext">Co-Coordinator</h6>
+            <div class="faculty1" data-aos="fade-up">
+                <img src="Images\ramsir.jpeg" alt="Dr. Ram Kumar" data-aos="fade-up">
+                <h4 class="faculty-text" data-aos="fade-up">Dr. Ram Kumar</h4>
+                <h6 class="faculty-subtext" data-aos="fade-up">Co-Coordinator</h6>
             </div>
         </div>
     </div>
     <div id="our-team">
-        <h2 class="sponsor-text">Our <span>Team</span>.</h2>
-        <div class="trans-box">
-            <div class="row-team">
+        <h2 class="sponsor-text" data-aos="fade-up">Our <span>Team</span>.</h2>
+        <div class="trans-box" data-aos="fade-up">
+            <div class="row-team" data-aos="fade-up">
                 <div class="member1">
-                    <img class="member-img"
-                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\38-removebg-preview.png">
+                    <img class="member-img" src="Images\250X250\38-removebg-preview.png" alt="Mansi Bakhshi">
                     <h4 class="member-name">Mansi<br>Bakhshi</h4>
                     <h6 class="member-post">President</h6>
                 </div>
                 <div class="member1">
-                    <img class="member-img"
-                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\37-removebg-preview.png">
+                    <img class="member-img" src="Images\250X250\37-removebg-preview.png" alt="Parv Daga">
                     <h4 class="member-name">Parv<br>Daga</h4>
                     <h6 class="member-post">Vice-President</h6>
                 </div>
                 <div class="member1">
-                    <img class="member-img"
-                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\43-removebg-preview.png">
+                    <img class="member-img" src="Images\250X250\43-removebg-preview.png" alt="Manan Kohli">
                     <h4 class="member-name">Manan<br>Kohli</h4>
                     <h6 class="member-post">Secretary & <br>Finance Lead</h6>
                 </div>
             </div>
-            <hr class="team-lines">
-            <div class="row-team">
+            <hr class="team-lines" data-aos="fade-up">
+            <div class="row-team" data-aos="fade-up">
                 <div class="member1">
-                    <img class="member-img"
-                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\39-removebg-preview.png">
+                    <img class="member-img" src="Images\250X250\39-removebg-preview.png" alt="Rakshita Singh">
                     <h4 class="member-name">Rakshita<br>Singh</h4>
                     <h6 class="member-post">Event Lead</h6>
                 </div>
                 <div class="member1">
-                    <img class="member-img"
-                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\40-removebg-preview.png">
+                    <img class="member-img" src="Images\250X250\40-removebg-preview.png" alt="Bhuvika Aggarwal">
                     <h4 class="member-name">Bhuvika<br>Aggarwal</h4>
                     <h6 class="member-post">PR & Outreach<br>Lead</h6>
                 </div>
                 <div class="member1">
-                    <img class="member-img"
-                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\45-removebg-preview.png">
+                    <img class="member-img" src="Images\250X250\45-removebg-preview.png" alt="Yashwardhan Rastogi">
                     <h4 class="member-name">Yashwardhan<br>Rastogi</h4>
                     <h6 class="member-post">Technical Lead</h6>
                 </div>
             </div>
-            <hr class="team-lines">
-            <div class="row-team">
+            <hr class="team-lines" data-aos="fade-up">
+            <div class="row-team" data-aos="fade-up">
                 <div class="member1">
-                    <img class="member-img"
-                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\42-removebg-preview.png">
+                    <img class="member-img" src="Images\250X250\42-removebg-preview.png" alt="Mannat Pal">
                     <h4 class="member-name">Mannat<br>Pal</h4>
                     <h6 class="member-post">Content lead</h6>
                 </div>
                 <div class="member1">
-                    <img class="member-img"
-                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\41-removebg-preview.png">
-                    <h4 class="member-name">Devika<br>Nair</h4>
+                    <img class="member-img" src="Images/250X250/image-removebg-preview (Custom) (1).png"
+                        alt="Harjas Singh">
+                    <h4 class="member-name">Harjas<br>Singh</h4>
                     <h6 class="member-post">Design Lead</h6>
                 </div>
                 <div class="member1">
-                    <img class="member-img"
-                        src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\250X250\44-removebg-preview.png">
+                    <img class="member-img" src="Images\250X250\44-removebg-preview.png" alt="Ambika Sharma">
                     <h4 class="member-name">Ambika<br>Sharma</h4>
                     <h6 class="member-post">Social Media<br>Lead</h6>
                 </div>
             </div>
-
-
-
         </div>
     </div>
     <div id="contact-us">
-        <h2 class="sponsor-text">Contact <span>Us</span>.</h2>
+        <h2 class="sponsor-text" data-aos="fade-up">Contact <span>Us</span>.</h2>
         <div class="contact-box">
             <div class="address">
-                <h4 class="address-heading">Our Location</h4>
-                <p class="address-text">VIT Bhopal University<br>Kothri Kalan,<br>Sehore - 466114,<br>Madhya
+                <h4 class="address-heading" data-aos="fade-up">Our Location</h4>
+                <p class="address-text" data-aos="fade-up">VIT Bhopal University<br>Kothri Kalan,<br>Sehore -
+                    466114,<br>Madhya
                     Pradesh,India</p>
-                <h4 class="address-heading">Email</h4>
-                <p class="address-text">linuxclubvitb@gmail.com</p>
-                <h4 class="address-heading">Social Media</h4>
+                <h4 class="address-heading" data-aos="fade-up">Email</h4>
+                <p class="address-text" data-aos="fade-up">linuxclubvitb@gmail.com</p>
+                <h4 class="address-heading" data-aos="fade-up">Social Media</h4>
                 <a href="https://www.instagram.com/linuxvitb?igsh=MXhscjBjMHVzb2Nncg==" target="_blank"><i
-                        class="ri-instagram-line"></i></a>
-                <a href="https://www.linkedin.com/company/linux-club-vitb" target="_blank"><i
-                        class="ri-linkedin-fill"></i></a>
+                        class="ri-instagram-line" data-aos="fade-up"></i></a>
+                <a href="https://www.linkedin.com/company/linux-club-vitb" target="_blank"><i class="ri-linkedin-fill"
+                        data-aos="fade-up"></i></a>
             </div>
             <div class="form-box">
 
-                <form onsubmit="sendEmail(); reset(); return false;">
+                <form onsubmit="sendEmail(); reset(); return false;" data-aos="fade-up">
                     <h4 class="message">Message Us..</h4>
                     <label for="name">Full Name:</label><br>
                     <input type="text" id="name" placeholder="Enter your name" name="name" required>
@@ -239,31 +259,17 @@
                         <button type="submit">Submit</button>
                     </div>
                     <script src="https://smtpjs.com/v3/smtp.js"></script>
-                    <script>
-                        function sendEmail() {
-                            Email.send({
-                                Host: "smtp.gmail.com",
-                                Username: "parvdaga29@gmail.com",
-                                Password: "Patrick@51400",
-                                To: 'parvdaga05@gmail.com',
-                                From: document.getElementById("email").value,
-                                Subject: "New Contact Form Enquiry",
-                                Body: "And this is the body"
-                            }).then(
-                                message => alert(message)
-                            );
-                        }
-                    </script>
+                    <script src="email.js" defer></script>
                 </form>
             </div>
         </div>
     </div>
 
     </div>
-    <footer>
+    <footer data-aos="fade-up">
         <div class="footer-info">
             <div class="logo-column">
-                <img src="C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Images\logo-removebg-preview.png">
+                <img src="Images\logo-removebg-preview.png" alt="Linux Club VITB Logo">
                 <h4 class="power">Empowering Linux</h4>
             </div>
             <div class="quick-links">
@@ -273,6 +279,7 @@
                     <li><a href="#events">Events</a></li>
                     <li><a href="#our-team">Team</a></li>
                     <li><a href="#contact-us">Contact</a></li>
+                    <li><a href="https://forms.gle/gZqEbXnRhti4Q8wq8" target="_blank">Join Us</a></li>
                 </div>
             </div>
             <div class="news">
@@ -287,8 +294,13 @@
         </div>
 
         <hr class="footer-line">
-        <h6 class="copyright">Copyright <i class="ri-copyright-line"></i> 2024 Linux Club | VIT Bhopal University</h6>
+        <h6 class="copyright">Copyright <i class="ri-copyright-line"></i> 2024 | Designed with <i
+                class="ri-heart-fill"></i> by Linux Club | VIT Bhopal University | All rights reserved</h6>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

@@ -2,6 +2,93 @@ body {
     font-family: 'Quicksand', sans-serif;
     background-color: #0F0727;
     margin: 0;
+    cursor: none;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0F0727;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-text {
+    font-family:moon dance;
+    font-size: 70px;
+    font-weight: 300;
+    color: #8602FA;
+    margin-bottom: 20px;
+}
+.loading-text-color{
+    font-size: 70px;
+    font-family: quicksand;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+/* .loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+} */
+
+@media (max-width:600px) {
+    .loading-text{
+        font-size: 35px;
+    }
+    .loading-text-color{
+        font-size: 35px;
+    }
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.cursor-dot{
+    width: 5px;
+    height: 5px;
+    background-color: #8602FA;
+}
+.cursor-outline{
+    width: 30px;
+    height: 30px;
+    border: 2px solid hsla(0, 0%, 100%, 0.5);
+}
+.cursor-dot,.cursor-outline{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@media (max-width:600px) {
+    .cursor-dot{
+        display: none;
+    }
+    .cursor-outline{
+        display: none;
+    }
 }
 
 /*color: #8602FA;*/
@@ -62,7 +149,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    height: 40vh;
+    height: 45vh;
     width: 250px;
     z-index: 999;
     padding-top: 5vh;
@@ -86,8 +173,9 @@ body {
     transition: 2ms;
     font-size: 1.3vw;
 }
-.sidebar li:hover{
-    
+
+.sidebar li:hover {
+
     opacity: 50%;
     width: 100%;
 }
@@ -95,7 +183,7 @@ body {
 
 @media (max-width:600px) {
     .nav {
-        height: 70px;
+        height: 80px;
     }
 
     .nav img {
@@ -111,16 +199,18 @@ body {
         font-size: 4vw;
         display: none;
     }
-    .sidebar{
+
+    .sidebar {
         display: none;
         position: absolute;
-        font-size:3vh;
+        font-size: 3vh;
         width: 100px;
     }
+
     .sidebar a {
         font-size: 2.5vh;
     }
-    }
+}
 
 
 #home {
@@ -161,7 +251,7 @@ body {
 .home-image {
     width: 50%;
     height: 100%;
-    margin: 7vh 4vw 5vh 2vw;
+    margin: 30vh 4vw 5vh 2vw;
     text-align: center;
     justify-content: center;
 }
@@ -173,19 +263,51 @@ body {
     height: auto;
 }
 
+.earth {
+    position: absolute;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: url(earth5sr.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    box-shadow: inset 0 0 0px rgba(0, 0, 0, 1), 0 0 50px #8602FA;
+    border-radius: 50%;
+    animation: animateearth 100s linear infinite;
+}
+
+@keyframes animateearth {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 750px 0;
+    }
+}
+
+
 @media (max-width:600px) {
     .home {
         margin-top: 2vh;
+        display: inline;
     }
 
-    .home-image {
-        display: none;
+    .earth {
+        width: 50vw;
+        height: 23vh;
+        margin-top: -25%;
+        left: 50%;
+        opacity: 35%;
+
     }
 
     .home-text {
         width: 100%;
-        background-image: url("C:\Users\parvd\OneDrive\Desktop\Linux Club VITB\Home page earth.png");
         background-size: cover;
+        text-align: center;
+        margin-left: 30%;
 
     }
 
@@ -201,12 +323,37 @@ body {
         font-size: 7vw;
     }
 }
+@media (min-width:1000px) {
+    .earth{
+        width: 250px;
+        height: 250px;
+    }
+}
+@media (min-width:1300px) {
+    .earth{
+    width: 300px;
+    height: 300px;}
+}
+@media (min-width:1600px) {
+    .earth{
+        margin-top: -100px;
+        width: 350px;
+        height: 350px;
+    }
+}
+@media (min-width:2300px) {
+    .earth{
+        margin-top: 0px;
+        width: 500px;
+        height: 500px;
+    }
+
+}
 
 .about {
     align-items: center;
     justify-content: center;
     margin-top: 15vh;
-    
 }
 
 .bottom-line {
@@ -231,13 +378,50 @@ body {
 }
 
 .about-text {
-    margin-top: 20vh;
-    text-align: center;
-    animation: fadeIn 5s;
+    margin-top: 15vh;
+    white-space: nowrap;
     color: white;
-    letter-spacing: 0.7vw;
+    letter-spacing: 0.5vw;
     font-size: 1.2vw;
     line-height: 6vh;
+    margin-left: 20%;
+    overflow: hidden;
+}
+
+.line1 {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid #8602FA;
+    /* Adjust thickness and color as needed */
+    margin-bottom: 5px;
+    /* Adjust spacing between lines */
+    animation: typing1 10s steps(70, end) infinite;
+}
+
+@keyframes typing1 {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+.line1 {
+    animation-fill-mode: forwards;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #8602FA
+    }
 }
 
 @media (max-width:600px) {
@@ -251,11 +435,16 @@ body {
     }
 
     .about-text {
-        margin-top: 8vh;
+        margin-top: 5vh;
         font-size: 2vw;
+
         letter-spacing: 0.4vw;
+        margin-left: 12%;
+        animation: typing1 0s steps(80, end) infinite
     }
 }
+
+
 
 .sponsor {
     margin-top: 20vh;
@@ -296,19 +485,19 @@ body {
     filter: grayscale(0%);
 }
 
-.unstop {
-    width: 10vw;
+.Give-my-Certificate {
+    width: 20vw;
     height: auto;
     filter: grayscale(100%);
 }
 
-.unstop:hover {
+.Give-my-Certificate:hover {
     filter: grayscale(0%);
 }
 
 @media (max-width:600px) {
     .sponsor {
-        margin-top: 10vh;
+        margin-top: 5vh;
     }
 
     .sponsor-text {
@@ -350,6 +539,7 @@ body {
 .box-1 {
     background-color: #290460;
     color: white;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
     text-align: center;
     height: 55vh;
     border-radius: 10%;
@@ -427,55 +617,62 @@ body {
     gap: 7vw;
 }
 
-.event1 {
-    background-color: #1D0C4D;
-    border-radius: 15px;
-    text-align: center;
-    width: 25vw;
-    height: auto;
-
+.container {
+    width: 350px;
+    height: 500px;
+    perspective: 800px;
 }
 
-.event-img {
-    margin-top: 5vh;
-    background-color: #8602FA;
-    width: 20vw;
-    height: auto;
-    border-radius: 20px;
-}
-
-.event-heading {
-    color: #8602FA;
-    font-size: 2vw;
-}
-
-.event-location {
-    color: white;
-    margin-top: -2vh;
-    font-size: 1.4vw;
-    font-weight: 400;
-}
-
-.event-box button {
-    display: inline-block;
-    padding: 1.5vh 1.5vw;
-    border: none;
-    font-family: quicksand;
-    font-weight: 500;
-    margin-bottom: 6vh;
-    font-size: 1.5vw;
-    border-radius: 50px;
-    text-align: center;
-    text-decoration: none;
-    background-color: white;
-    color: #290460;
+.container:hover>.card {
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transform: rotateY(180deg);
 }
 
-.event-box button:hover {
-    background-color: #8602FA;
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.front-1,.front-2,
+.back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-1 {
+    background: url(Third-Eye-Quest.png);
+}
+.front-2{
+    background: url(Silent-disco.png);
+}
+
+
+.back {
+    background: rgb(29, 04, 60 );
+    transform: rotateY(180deg);
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.event-name{
+    color: #8602FA;
+    font-size: 2.5vw;
+}
+.event-desc{
     color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    line-height: 3.5vh;
 }
 
 @media (max-width:600px) {
@@ -485,30 +682,56 @@ body {
 
     .event-box {
         margin-top: 7vh;
-        flex-direction: column;
         gap: 5vh;
     }
-
-    .event1 {
-        width: 80%;
+    .container{
+        width: 230px;
+        height: 270px;
     }
-
-    .event-img {
-        width: 40vw;
+    .front-1,.front-2,
+    .back {
+        border-radius: 1.7rem;
     }
-
-    .event-heading {
-        font-size: 6vw;
+    .front-1{
+        background-image: url(Third-Eye-Quest-1.png);
     }
-
-    .event-location {
-        font-size: 4.5vw;
+    .front-2{
+        background-image: url(Silent-disco-1.png);
     }
-
-    .event-box button {
-        padding: 1vh 2.5vw;
-        margin-top: -4vh;
-        font-size: 3vw;
+    .event-name{
+        font-size: 4vw;
+    }
+    .event-desc{
+        font-size: 1.9vw;
+        line-height: 1.35vh;
+    }
+}
+@media (min-width:1600px) {
+    .container{
+        width: 400px;
+        height: 600px;
+    }
+}
+@media (min-width:2300px) {
+    .container{
+        width: 500px;
+        height: 750px;
+    }
+    .event-name{
+        font-size: 60px
+    }
+    .event-desc{
+        font-size: 20px;
+    }
+    .front-1,.front-2,
+    .back {
+        border-radius: 2.3rem;
+    }
+    .front-1{
+        background-image: url(Third-Eye-Quest-2.png);
+    }
+    .front-2{
+        background-image: url(Silent-disco-2.png);
     }
 }
 
@@ -540,6 +763,7 @@ body {
     width: 30vw;
     align-items: center;
     height: auto;
+    box-shadow: 0 0 7px 4px rgba(50, 50, 50, 0.25);
     justify-content: center;
     border: white solid 0.01em;
     border-radius: 30px;
@@ -562,7 +786,7 @@ body {
 .faculty-subtext {
     color: #8602FA;
     margin-top: 2vh;
-    
+
     font-size: 1.4vw;
 }
 
@@ -588,14 +812,23 @@ body {
         height: 80px;
         margin-top: 2vh;
     }
-    .faculty-text{
+
+    .faculty-text {
         font-size: 2vw;
         font-weight: 400;
     }
+
     .faculty-subtext {
         font-size: 1.6vw;
         margin-bottom: 2vh;
     }
+}
+@media (min-width:2000px) {
+    .faculty1 img {
+        width: 250px;
+        height: 250px;
+    }
+
 }
 
 #our-team {
@@ -681,8 +914,18 @@ body {
         font-size: 2vw;
     }
 }
-
-
+@media (min-width:1600px) {
+    .member1 img {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (min-width:2300px) {
+    .member1 img {
+        width: 250px;
+        height: 250px;
+    }
+}
 
 
 #contact-us {
@@ -718,7 +961,8 @@ body {
     margin-top: -1vh;
     line-height: 4vh;
 }
-.address a{
+
+.address a {
     text-decoration: none;
     font-size: 2vw;
 }
@@ -769,13 +1013,14 @@ form label {
     margin-bottom: -2vh;
 }
 
-form input,form textarea {
+form input,
+form textarea {
     border: 0;
     padding: 10px 15px;
     border-radius: 10px;
     outline: none;
     background: white;
-    font-size:1vw ;
+    font-size: 1vw;
     margin-bottom: -3vh;
 }
 
@@ -838,11 +1083,14 @@ form button:hover {
         width: 80%;
         margin-left: 10%;
         margin-top: 3vh;
+        display: none;
     }
+
     .form textarea {
         font-size: 3vh;
     }
-    .form input{
+
+    .form input {
         font-size: 2vh;
     }
 
@@ -861,7 +1109,11 @@ form button:hover {
         font-size: 3vw;
     }
 }
-
+@media (min-width:2000px) {
+    form{
+        gap: 1vh;
+    }
+}
 
 
 footer {
@@ -946,10 +1198,12 @@ footer {
     margin-left: 5%;
 
 }
-.footer-social a{
+
+.footer-social a {
     text-decoration: none;
     font-size: 2vw;
-    color: white;}
+    color: white;
+}
 
 .copyright {
     text-align: center;
@@ -967,7 +1221,7 @@ footer {
     }
 
     .copyright {
-        font-size: 2.5vw;
+        font-size: 2vw;
         padding-bottom: 3vh;
         margin-top: 2vh;
     }
@@ -1017,9 +1271,10 @@ footer {
     .footer-social {
         margin-bottom: 2vh;
     }
-    .footer-social a{
+
+    .footer-social a {
         font-size: 3vh;
     }
-    
+
 
 }
