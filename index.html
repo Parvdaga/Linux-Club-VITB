@@ -23,16 +23,9 @@
                 class="loading-text-color">Namaste..</span></div>
         <div class="loading-spinner"></div>
     </div>
-    <script>
-        setTimeout(function () {
-            var loadingOverlay = document.querySelector('.loading-overlay');
-            loadingOverlay.parentNode.removeChild(loadingOverlay);
-        }, 2000);
-    </script>
-
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
-    <script src="cursor.js" defer></script>
+    
     <div class="main">
         <div class=nav>
             <img src="Images\logo.png" alt="Linux Club VITB Logo">
@@ -52,7 +45,7 @@
                 <li><a href="#contact-us">Contact</a></li>
                 <li><a href="https://forms.gle/gZqEbXnRhti4Q8wq8" target="_blank">Join Us</a></li>
             </ul>
-            <script src="sidebar.js" defer></script>
+            
         </div>
     </div>
     <div id="home">
@@ -258,8 +251,7 @@
                     <div style="text-align: center;">
                         <button type="submit">Submit</button>
                     </div>
-                    <script src="https://smtpjs.com/v3/smtp.js"></script>
-                    <script src="email.js" defer></script>
+                    
                 </form>
             </div>
         </div>
@@ -301,6 +293,16 @@
     <script>
         AOS.init();
     </script>
+    <script src="sidebar.js" defer></script>
+    <script src="cursor.js" defer></script>
+    <script>
+        setTimeout(function () {
+            var loadingOverlay = document.querySelector('.loading-overlay');
+            loadingOverlay.parentNode.removeChild(loadingOverlay);
+        }, 2000);
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="email.js" defer></script>
 </body>
 
 </html>
